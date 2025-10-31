@@ -1,0 +1,115 @@
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.userInfo {
+    margin-top: 10px;
+}
+
+.connection {
+    margin-top: 10px;
+
+    &.connected {
+        color: green;
+    }
+
+    &.disconnected {
+        color: red;
+    }
+}
+
+.messagesContainer {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.messageItem {
+    margin-bottom: 10px;
+    padding: 5px;
+    background: #f5f5f5;
+}
+
+.messageContent {
+    font-weight: bold;
+}
+
+.fileInfo {
+    font-size: 12px;
+    color: #666;
+}
+
+.fileDownloadButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-align: left;
+    color: #0066cc;
+    text-decoration: underline;
+    font-size: 12px;
+
+    &:hover {
+        color: #0052a3;
+    }
+
+    &:active {
+        color: #003d7a;
+    }
+}
+
+.timestamp {
+    font-size: 10px;
+    color: #999;
+}
+
+.inputContainer {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.messageInput {
+    width: 70%;
+    padding: 8px;
+}
+
+.sendButton {
+    padding: 8px 16px;
+}
+
+.fileUploadContainer {
+    margin-top: 20px;
+}
+
+.fileInput {
+    margin-top: 10px;
+}
+
+.jobsContainer {
+    margin-top: 20px;
+}
+
+.jobItem {
+    margin-bottom: 10px;
+    padding: 5px;
+    background: #f0f0f0;
+}
+
+.jobResult {
+    font-size: 12px;
+    color: #666;
+}
+
+.errorMessage {
+    margin-top: 10px;
+    padding: 10px;
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef5350;
+    border-radius: 4px;
+}

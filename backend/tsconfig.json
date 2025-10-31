@@ -1,0 +1,28 @@
+{
+    "include": ["src", "__tests__"],
+    "compilerOptions": {
+        "module": "commonjs",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "lib": ["es6"],
+        "target": "es6",
+        "allowJs": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "noImplicitAny": true,
+        "inlineSourceMap": true,
+        "outDir": "./dist",
+        "baseUrl": ".",
+        "noEmit": false,
+        "allowImportingTsExtensions": false,
+        "paths": {
+            "~/models": ["./src/models"],
+            "~/store": ["./src/store"],
+            "~/utils": ["./src/utils"],
+            "@chat-mvp/common": ["../common/src"]
+        }
+    }
+}
+
