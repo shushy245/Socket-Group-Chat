@@ -242,7 +242,7 @@ Production: HTTP POST → S3 → WebSocket notification
 - Direct coupling between clients and server
 
 **Production Solution**:
-- RabbitMQ or AWS SQS for message queuing
+- RabbitMQ for message queuing
 - Separate queues for different message types
 - Worker processes consume from queues
 - DLQ for failed messages
@@ -286,7 +286,7 @@ For production, the following reliability improvements would be implemented:
    - Stored in database with expiration
 
 3. **Persistent Message Queue**
-   - Replace in-memory queue with RabbitMQ/AWS SQS
+   - Replace in-memory queue with RabbitMQ
    - Messages persist across server restarts
    - Guaranteed delivery with acknowledgments
    - Consumer groups for load distribution
@@ -413,47 +413,7 @@ For production, the following reliability improvements would be implemented:
    - Security scanning (Snyk, npm audit)
    - Penetration testing
 
-## 9. Cost Awareness
-
-### MVP Costs (Current)
-
-**Infrastructure**:
-- **Development**: $0 (local development)
-- **Hosting**: Minimal (single server instance)
-- **Storage**: In-memory (no cloud storage)
-- **Bandwidth**: Minimal (small scale)
-
-**Estimated Monthly Cost**: ~$5-20 (small VPS instance)
-
-### Production Costs (Scale-dependent)
-
-**Infrastructure** (10K users, 100K messages/day):
-- **Compute**: 
-  - Load balancer: $20/month
-  - Backend servers (2-3 instances): $50-150/month
-- **Database**: 
-  - PostgreSQL (managed): $50-200/month (RDS, Cloud SQL)
-- **Storage**: 
-  - S3/Cloud Storage: $10-50/month (file uploads)
-- **Message Queue**: 
-  - RabbitMQ/AWS SQS: $20-100/month
-- **Monitoring**: 
-  - Logging (CloudWatch, Datadog): $50-200/month
-- **CDN**: 
-  - CloudFront/Cloudflare: $20-100/month
-
-**Estimated Monthly Cost**: $220-820/month
-
-**Cost Optimization Strategies**:
-- Use reserved instances (30-50% savings)
-- Auto-scaling (scale down during low traffic)
-- Cloud-native services (managed databases reduce ops cost)
-- Caching layer (Redis) to reduce database load
-- Content delivery network for static assets
-
-**Cost Per User**: ~$0.02-0.08/month at 10K users
-
-## 10. Sequence Diagram
+## 9. Sequence Diagram
 
 ### Chat Message Flow
 
@@ -501,7 +461,7 @@ User          Frontend         WebSocket Server       Store       Worker       U
   │               │                    │                │           │            │
 ```
 
-## 11. Roadmap
+## 10. Roadmap
 
 ### MVP (Current)
 - ✅ REST API endpoints (POST /jobs, GET /jobs/:id)
@@ -549,7 +509,7 @@ User          Frontend         WebSocket Server       Store       Worker       U
 - [ ] Performance optimization
 - [ ] Cost optimization
 
-**Timeline**: 2-4 weeks
+**Timeline**: 3 weeks
 
 ---
 
