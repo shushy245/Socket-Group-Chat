@@ -37,16 +37,6 @@ See `docs/design-doc.md` for comprehensive architecture documentation.
 - Persistent message queues (RabbitMQ/Redis)
 - Horizontal scaling (load balancers, Redis pub/sub)
 
-### REST Endpoints
-
-#### `POST /jobs`
-
-Create a new job (file upload or chat message).
-
-#### `GET /jobs/:id`
-
-Get job status.
-
 ### Running Tests
 
 **Backend:**
